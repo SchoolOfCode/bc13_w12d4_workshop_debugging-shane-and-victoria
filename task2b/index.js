@@ -1,10 +1,24 @@
+// DEBUGGING 🐞
+// read through the code and discuss what's happening
+// try to understand what the code's expected behavior is
+// set up and run debugger
+// document our findings as we go (comments and breakpoints)
+
+
 function add(numb1, numb2) {
-  let num1 = String(numb1);
+  // should be a value not string
+  // let num1 = String(numb1);
+  let num1 = numb1;
   return num1 + numb2;
 }
 
+// is operator parameter useful here?
 function multiply(num1, operator, num2) {
-  num1, operator, num2;
+  // user return, and use multiply oporator 
+  // also using if condition to make use of operator parameter
+  if (operator === "*") {
+    return num1 * num2;
+  }
 }
 
 function hasPets(hasPet, firstName, lastName) {
