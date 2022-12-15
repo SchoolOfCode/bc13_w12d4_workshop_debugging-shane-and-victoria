@@ -7,12 +7,14 @@ function square(num) {
   return num * num;
 }
 
+// must return
 function multiply(a, b) {
-   a * b;
+   return a * b;
 }
 
 function add(a, b) {
-  a = String(a);
+  // should be number
+  // a = String(a);
   return a + b;
 }
 
@@ -28,10 +30,9 @@ function calc(numA, numB) {
   } else {
     return (`${answer} is incorrect! The code still has bugs`);
   }
-  
 }
 
 /* DO NOT CHANGE THE CODE BELOW */
 calc(2, 4)
-module.exports= { calc}
+module.exports= { calc }
 
