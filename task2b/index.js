@@ -22,47 +22,65 @@ function multiply(num1, operator, num2) {
 }
 
 function hasPets(hasPet, firstName, lastName) {
-  if (hasPet === "true") {
+  // this is throwing false because a string doesn't STRICTLY equal a boolean. 
+  // if (hasPet === "true") {
+    if (hasPet){
     return firstName + " " + lastName + " really does have a nice pet";
   } else {
-    return;
-    firstName + " " + lastName + " " + "has no pets";
+    // currently trying to run code after a return - change the order so it's returning that code
+      // return;
+      // firstName + " " + lastName + " " + "has no pets";
+    return firstName + " " + lastName + " " + "has no pets";
   }
 }
 
 let myAccountNumbers = {
-  account1: "220",
+  // String won't be usable in calculations
+  // account1: "220",
+  account1: 220,
   account2: 144,
   account3: 12,
   account4: 1443,
 };
 
 function addsBalanceOfAccounts() {
-  let firstAccount = myAccountNumbers[1];
-  let secondAccount = myAccountNumbers["account3"];
+  //this is using the incorrect method to acces 'account 1' value. In fact, using bracket notation is non-standard in this case. So, switch these below to dot notation to access values. 
+  // additionally, change what's being used to access it to the key that we want to target. 
+  // and finally, if this function is supposed to add JUST TWO accounts, then rename it ideally
+  // let firstAccount = myAccountNumbers[1];
+  let firstAccount = myAccountNumbers.account2;
+  let secondAccount = myAccountNumbers.account3;
   return firstAccount + secondAccount;
 }
 
+// Change ll of the below so that answers are being returned
 function calculator(firstNumber, operator, secondNumber) {
   if (operator === "+") {
     let answer = firstNumber + secondNumber;
-    return;
+    //return;
+    return answer;
   }
   if (operator === "-") {
     let answer = firstNumber - secondNumber;
-    return;
+   // return;
+   return answer;
   }
   if (operator === "*") {
     let answer = firstNumber * secondNumber;
-    return;
+    //return;
+    return answer;
   }
   if (operator === "/") {
     let answer = firstNumber / secondNumber;
-    return;
+    //return;
+    return answer;
+
   } else {
     let answer = "Invalid inputs. Try again!";
-    return;
-    answer;
+    // needs to be returning the answer, so change the placement here 
+    //return;
+    // answer;
+    return answer;
   }
 }
 
